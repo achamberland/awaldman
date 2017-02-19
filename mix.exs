@@ -19,7 +19,7 @@ defmodule V2.Mixfile do
     [mod: {V2, []},
      applications: [
 	:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy,
-	:logger, :gettext, :httpotion, :phoenix_live_reload]]
+	:logger, :gettext, :httpotion, :phoenix_live_reload, :edeliver]]
   end
 
   # Specifies which paths to compile per environment.
@@ -33,11 +33,12 @@ defmodule V2.Mixfile do
     [{:phoenix, "~> 1.2.0"},
      {:phoenix_pubsub, "~> 1.0"},
      {:phoenix_html, "~> 2.6"},
-     {:phoenix_live_reload, "~> 1.0", only: :dev},
+     {:phoenix_live_reload, "~> 1.0"},
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
      {:poison, "~> 2.0"},
      {:exrm, "~> 1.0.0"},
-     {:httpotion, "~> 3.0.2"}]
+     {:httpotion, "~> 3.0.2"},
+     {:edeliver, git: "https://github.com/boldpoker/edeliver.git"}]
   end
 end

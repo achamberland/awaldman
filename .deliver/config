@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+APP="awaldman" # name of your release
+
+BUILD_HOST="server ip / hostname" # host where to build the release
+BUILD_USER="root" # local user at build host
+BUILD_AT="/git/awaldman/builds" # build directory on build host
+RELEASE_DIR="/git/awaldman/builds/rel/awaldman"
+RELEASE_VERSION=0.0.1
+
+STAGING_HOSTS="staging.aaronwaldman.com" # staging / test hosts separated by space
+STAGING_USER="git" # local user at staging hosts
+TEST_AT="/test/awaldman" # deploy directory on staging hosts. default is DELIVER_TO
+
+PRODUCTION_HOSTS="aaronwaldman.com www.aaronwaldman.com" # deploy / production hosts separated by space
+PRODUCTION_USER="root" # local user at deploy hosts
+DELIVER_TO="/opt/awaldman" # deploy directory on production hosts

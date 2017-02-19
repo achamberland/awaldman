@@ -1,0 +1,8 @@
+run_erl [16263] Sun Feb 19 16:03:56 2017
+Args before exec of shell:
+run_erl [16263] Sun Feb 19 16:03:56 2017
+argv[0] = sh
+run_erl [16263] Sun Feb 19 16:03:56 2017
+argv[1] = -c
+run_erl [16263] Sun Feb 19 16:03:56 2017
+argv[2] = exec "/var/www/aaronwaldman.com/html/rel/v2/bin/v2" "console"

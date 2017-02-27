@@ -1,4 +1,4 @@
-defmodule V2.FacebookRequestController do
+defmodule V2.Api.WebHooks.Facebook.FacebookRequestController do
 
 	@fb_access_token "" # Will use env variable
 	@events_url "https://graph.facebook.com/aaronwaldmanmusic/events" 

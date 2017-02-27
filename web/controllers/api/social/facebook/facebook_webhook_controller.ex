@@ -1,9 +1,10 @@
-defmodule V2.FacebookWebhookController do
+defmodule V2.Api.WebHooks.Facebook.FacebookWebhookController do
 	use V2.Web, :controller
 
 	def create(conn, params) do
 		authenticate
 		parsed = Poison.decode!(params)
+		Logger.info parsed
 
 		case parsed do
 			%{object: "page"} -> handle_page_hook

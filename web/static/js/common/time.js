@@ -6,7 +6,7 @@ export const Clock = {
         var rawHour = date.getHours();
         var isPm = rawHour > 11;
 
-        var hour = rawHour === 0 ? 12 : isPm && rawHour !== 12 ? rawHour - 12 : rawHour;
+        var hour = rawHour === 0 ? 12 : isPm && rawHour !== 12 ? rawHour - 11 : rawHour;
         var minutes = (date.getMinutes() + '0').slice(-2);
         var amPmString = isPm ? 'pm' : 'am';
 
@@ -14,10 +14,12 @@ export const Clock = {
     },
 
     getTimezoneOffset: function(dateString) {
-        var timezoneOffset  = dateString.match(this.timezoneRegex);
+        var timezoneRegex   = /-(GMT|)\d\d\d\d$/gi;
+        var timezoneOffset  = dateString.match(timezoneRegex);
         var timezoneRaw     = parseInt(timezoneOffset && timezoneOffset[0].replace(/w/i, ""), 10);
         var timezoneMinutes = timezoneRaw * 0.6; // Timezones that include minutes will be broken
-        return timezoneRaw / 100;
+
+        return timezoneMinutes / 100;
     },
 
     getTimeRange: function(start, end) {
@@ -28,7 +30,7 @@ export const Clock = {
             return start + end
         }
         return start + " &ndash; " + end;
-    }	
+    }
 }
 
 export const Calendar = {
@@ -41,7 +43,8 @@ export const Calendar = {
     },
 
     getDateFromTimestamp: function(dateString) {
-        var formattedDateString = dateString.replace(this.timezoneRegex, "");
+        var timezoneRegex = /-(GMT|)\d\d\d\d$/gi;
+        var formattedDateString = dateString.replace(timezoneRegex, "");
         var date = new Date(formattedDateString);
 
         var timezoneHours = Clock.getTimezoneOffset(dateString);

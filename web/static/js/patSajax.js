@@ -8,7 +8,7 @@ export const PatSajax = {
 	Shows: function() {
         return $.ajax({
             method: 'GET',
-            url: 'https://dl.dropboxusercontent.com/u/102907239/aaron_waldman/events.json',
+            url: '../json/events.json',
             dataType: 'json'
         });
     },

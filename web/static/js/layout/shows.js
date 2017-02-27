@@ -2,20 +2,12 @@ import $ from "jquery";
 import Config from "web/static/js/layout/config";
 import Chaplin from "web/static/js/common/chaplin";
 import { Clock, Calendar } from "web/static/js/common/time";
+import eventJson from "../json/events.json";
 
 const Shows = {
     events: [],
 
-    loadDependencies: function() {
-        return $.ajax({
-            method: 'GET',
-            url: 'https://dl.dropboxusercontent.com/u/102907239/aaron_waldman/events.json',
-            dataType: 'json'
-        });
-    },
-
-    init: function(response) {
-        this.events = response.data;
+    init: function() {
         this.render();
         this.attachPageLoadEvents();
     },
@@ -105,7 +97,7 @@ const Shows = {
     },
 
     render: function() {
-        var shows = this.events;
+        var shows = eventJson.data;
         var template = $('#showTemplate');
         var descriptionMaxHeight = Config.collapse_long_show_descriptions ? 36 : 9999;
         var limit = Math.min(shows.length, Config.max_shows_to_display);

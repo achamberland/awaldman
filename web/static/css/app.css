@@ -953,7 +953,7 @@ header.showsPageOverlap .just-the-tip {
 /* ---------- Shows --------- */
 
 .shows-page {
-    min-height: calc(100% - 167px);
+    min-height: calc(100vh - 167px);
 }
 
 .shows {
@@ -1023,6 +1023,8 @@ header.showsPageOverlap .just-the-tip {
 }
 
 .showItem, #no-shows {
+    box-sizing: border-box;
+    min-height: 119px;
     margin: 10px 0;
     padding: 20px;
 
@@ -1040,6 +1042,10 @@ header.showsPageOverlap .just-the-tip {
 
 .showItem:hover {
     box-shadow: 0 0 8px -1px rgba(0,0,0,0.4);
+}
+
+#no-shows {
+    color: #eceFe2;
 }
 
 .linkContainer {
@@ -1135,7 +1141,10 @@ header.showsPageOverlap .just-the-tip {
     font-size: 15px;
     color: #eceFe2;
 }
-@media screen and (max-width: 480px) {
+
+.eventDescription a {
+    color: #eceFe2;
+    text-decoration: underline;
 }
 
 

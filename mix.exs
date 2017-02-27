@@ -37,8 +37,9 @@ defmodule V2.Mixfile do
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
      {:poison, "~> 2.0"},
-     {:exrm, "~> 1.0.0"},
+   # {:exrm, "~> 1.0.0"},
      {:httpotion, "~> 3.0.2"},
-     {:edeliver, git: "https://github.com/boldpoker/edeliver.git"}]
+     {:edeliver, git: "https://github.com/boldpoker/edeliver.git"},
+     {:distillery, "~> 1.0"}]
   end
 end

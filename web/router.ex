@@ -32,8 +32,8 @@ defmodule V2.Router do
   scope "/api", V2.Api do
     pipe_through :api
 
-    scope "/social/hooks/facebook", WebHooks.Facebook do
-      post "/shows", FacebookWebhookController, :create
+    scope "/hooks/facebook" do
+      resources "/shows", FacebookWebhookController, only: [:index, :create]
     end
   end
 

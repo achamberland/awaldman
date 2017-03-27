@@ -2,7 +2,7 @@ import $ from "jquery";
 import Config from "web/static/js/layout/config";
 import Chaplin from "web/static/js/common/chaplin";
 import { Clock, Calendar } from "web/static/js/common/time";
-import eventJson from "../json/events.json";
+import eventJson from 'web/static/js/json/events.json';
 
 const Shows = {
     events: [],

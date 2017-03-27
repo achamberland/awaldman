@@ -1,23 +1,23 @@
-defmodule V2.Api.WebHooks.Facebook.FacebookRequestController do
+defmodule V2.Api.FacebookRequestController do
 
-	@fb_access_token "" # Will use env variable
+	@fb_access_token "728356867267766%7CuWPPYMGHZ1jaSCy91XhfiJtupoU" # Will use env variable
 	@events_url "https://graph.facebook.com/aaronwaldmanmusic/events" 
 
-	@json_write_path "/web/static/assets/json"
-	@json_read_path "/web/priv/static/json"
+	@json_write_path "web/static/js/json/"
 
-	def update_shows do
-		response = HTTPotion.get!(@events_url, query: %{accessToken: @fb_access_token})
-		case response do
-			%{status_code: 200} -> write_shows(response)
-			_ -> raise response
+	use V2.Web, :controller
+
+	def update_shows(conn) do
+		response = HTTPotion.get!(@events_url, query: %{access_token: @fb_access_token})
+		case response.status_code do
+			200 -> write_shows(conn, response)
+			_ -> raise "Bad HTTP response from Facebook events request"
 		end
 	end
 
-	# Yeah... not secure
-	def write_shows(response) do
-		{:ok, file} = File.open! @json_write_path<>"/shows.json", [:write]
-		IO.binwrite file, response
-		File.close file
+	# Prob not secure
+	def write_shows(conn, response) do
+		File.write @json_write_path <> "events.json", response.body
+		send_resp(conn, 200, "Events list updated")
 	end
 end

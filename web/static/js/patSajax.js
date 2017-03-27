@@ -8,7 +8,7 @@ export const PatSajax = {
 	Shows: function() {
         return $.ajax({
             method: 'GET',
-            url: '../json/events.json',
+            url: '/priv/static/json/events.json',
             dataType: 'json'
         });
     },

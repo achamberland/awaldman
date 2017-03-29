@@ -19,7 +19,7 @@ defmodule V2.Mixfile do
     [mod: {V2, []},
      applications: [
 	:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy,
-	:logger, :gettext, :httpotion, :phoenix_live_reload, :edeliver]]
+	:logger, :gettext, :httpotion, :phoenix_live_reload, :edeliver, :ssl]]
   end
 
   # Specifies which paths to compile per environment.

@@ -9,6 +9,12 @@ use Mix.Config
 config :v2, V2.Endpoint,
 #  http: [port: 4000],
   http: [port: 80],
+  https: [port: 443,
+          otp_app: :v2,
+          keyfile: "/etc/letsencrypt/live/aaronwaldman.com/privkey.pem",
+          certfile: "/etc/letsencrypt/live/aaronwaldman.com/cert.pem" #,
+          # cacertfile: System.get_env("AARONWALDMAN_SSL_INTERMEDIATE_CERT") # OPTIONAL Key for intermediate certificates
+          ]
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
@@ -33,3 +39,4 @@ config :logger, :console, format: "[$level] $message\n"
 # Set a higher stacktrace during development. Avoid configuring such
 # in production as building large stacktraces may be expensive.
 config :phoenix, :stacktrace_depth, 20
+

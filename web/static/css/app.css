@@ -64,11 +64,11 @@ clay: #7F3C00;
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('/fonts/icomoon.eot?qywafw');
-  src:  url('/fonts/icomoon.eot?qywafw#iefix') format('embedded-opentype'),
-    url('/fonts/icomoon.ttf?qywafw') format('truetype'),
-    url('/fonts/icomoon.woff?qywafw') format('woff'),
-    url('/fonts/icomoon.svg?qywafw#icomoon') format('svg');
+  src:  url('/fonts/icomoon.eot?u03ykc');
+  src:  url('/fonts/icomoon.eot?u03ykc#iefix') format('embedded-opentype'),
+    url('/fonts/icomoon.ttf?u03ykc') format('truetype'),
+    url('/fonts/icomoon.woff?u03ykc') format('woff'),
+    url('/fonts/icomoon.svg?u03ykc#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -88,18 +88,41 @@ clay: #7F3C00;
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-menu:before {
+  content: "\e909";
+}
+.icon-music:before {
+  content: "\e908";
+}
+.icon-envelope-o:before {
+  content: "\e907";
+}
+.icon-film:before {
+  content: "\e904";
+}
+.icon-chevron-down:before {
+  content: "\e905";
+}
+.icon-chevron-up:before {
+  content: "\e906";
+}
+.icon-chevron-thin-up:before {
+  content: "\e902";
+}
+.icon-chevron-thin-down:before {
+  content: "\e903";
+}
 .icon-bandcamp:before {
   content: "\e900";
+}
+.icon-instagram:before {
+  content: "\e901";
 }
 .icon-paste:before {
   content: "\e92d";
 }
 .icon-phone:before {
   content: "\e942";
-  margin-top: -1px;
-}
-.icon-envelope:before {
-  content: "\e945";
 }
 .icon-calendar:before {
   content: "\e953";
@@ -107,7 +130,7 @@ clay: #7F3C00;
 .icon-clipboard:before {
   content: "\e9b8";
 }
-.icon-facebook:before {
+.icon-facebook2:before {
   content: "\ea91";
 }
 .icon-twitter:before {
@@ -116,17 +139,9 @@ clay: #7F3C00;
 .icon-youtube:before {
   content: "\ea9d";
 }
-.icon-menu:before {
-  content: "\e9bd";
+.icon-book:before {
+  content: "\e91f";
 }
-.icon-instagram {
-  font-size: 26px;
-  vertical-align: -3px;
-}
-.icon-instagram:before {
-  content: "\e901";
-}
-
 
 
 
@@ -290,9 +305,16 @@ header {
 
 .page {
     width: 100%;
-    padding: 40px 0;
+    min-height: calc(100vh - 100px);
+    padding: 50px 0;
     position: relative;
     overflow: hidden;
+}
+
+@media screen and (max-width: 480px) {
+    .page {
+        min-height: 0;
+    }
 }
 
 .page-border {
@@ -309,13 +331,6 @@ header {
 
 .container.full-width {
     width: 100%;
-}
-
-.content {
-    width: 700px;
-    margin: 0;
-    padding: 30px;
-    float: left;
 }
 
 .vertical-middle {
@@ -338,12 +353,6 @@ html body .hide {
     clear: both;
 }
 
-@media screen and (max-width: 1196px) {
-    .content {
-        width: calc(100% - 496px);
-    }
-}
-
 @media screen and (max-width: 480px) {
     .mobile-hide {
         display: none !important; /* Sorry future self */
@@ -353,6 +362,44 @@ html body .hide {
     .mobile-only {
         display: none !important; /* Sorry future self */
     }
+}
+
+.responsive-container {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+}
+ 
+/* 16x9 Aspect Ratio */
+.responsive-container-16x9 {
+  padding-bottom: 56.25%;
+}
+ 
+/* 4x3 Aspect Ratio */
+.responsive-container-4x3 {
+  padding-bottom: 75%;
+}
+ 
+.responsive-container iframe {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+[class*="glassy-overlay"] {
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.25);
+}
+.glassy-overlay-light {
+    background: rgba(255, 255, 255, 0.15);
+}
+.glassy-overlay-heavy {
+    background: rgba(255, 255, 255, 0.5);
+}
+.glassy-overlay-supe-heavs {
+    background: rgba(255, 255, 255, 0.75);
 }
 
 /* ------------------------------- HEADER ------------------------- */
@@ -402,7 +449,7 @@ header {
 
 .header-link {
     display: inline-block;
-    margin-right: 20px;
+    margin-right: 25px;
     line-height: 65px;
 
     color: #333;
@@ -688,10 +735,10 @@ header {
     #header.show-mobile-nav {
         height: auto;
     }
-    #header.show-mobile-nav.homeContentOverlap {
+    .homeContentOverlap #header.show-mobile-nav {
         background: rgba(255,255,255,.98);
     }
-    #header.show-mobile-nav.homeContentOverlap {
+    .homeContentOverlap #header.show-mobile-nav {
         background: rgba(255,255,255,.98);
     }
 
@@ -726,51 +773,51 @@ header.noBg {
     background: transparent;
 }
 
-header.showsPageOverlap {
+.showsPageOverlap header {
     background: #2E1E03;
 }
-header.showsPageOverlap h1 {
+.showsPageOverlap header h1 {
     border-bottom: 0;
 }
 
-header.showsPageOverlap,
-header.showsPageOverlap h1,
-header.showsPageOverlap .header-link {
+.showsPageOverlapheader,
+.showsPageOverlap header h1,
+.showsPageOverlap header .header-link {
     color: #eceFe2;
 }
 
 
-header.showsPageOverlap .header-link.active,
-header.showsPageOverlap .header-link.active i {
+.showsPageOverlap header .header-link.active,
+.showsPageOverlap header .header-link.active i {
     color: #fff;
 
 }
 
-header.showsPageOverlap h1:hover,
-header.showsPageOverlap .header-link:hover {
+.showsPageOverlap header h1:hover,
+.showsPageOverlap header .header-link:hover {
     color: #fff;
 }
 
-header.showsPageOverlap .header-link-underline {
+.showsPageOverlap header .header-link-underline {
     border-color: #eceFe2;
 }
-header.showsPageOverlap .header-link:hover .header-link-underline {
+.showsPageOverlap header .header-link:hover .header-link-underline {
     border-color: #fff;
 }
 
-header.showsPageOverlap #booking-info {
+.showsPageOverlap header #booking-info {
     background: #eceFe2;
 }
-header.showsPageOverlap #booking-info a,
-header.showsPageOverlap #booking-info i {
+.showsPageOverlap header #booking-info a,
+.showsPageOverlap header #booking-info i {
     color: #333;
 }
-header.showsPageOverlap .just-the-tip {
+.showsPageOverlap header .just-the-tip {
     color: #eceFe2;
 }
 
 @media screen and (max-width: 480px) {
-    header.showsPageOverlap.show-mobile-nav h1 {
+    .showsPageOverlap header.show-mobile-nav h1 {
         border-bottom: 2px solid #333;
     }
 }
@@ -816,34 +863,38 @@ header.showsPageOverlap .just-the-tip {
     color: #6C1406;
 } 
 
-/* --------- About ---------- */
 
-.about.content {
-    background: rgba(255, 255, 255, 0.3);
+
+/* --------- Video Page ---------- */
+
+.video-page {
+    padding-bottom: 0;
 }
-
-.about-description {
-    font-size: 16px;
-    orphans: 3;
-}
-.about-description a {
-    color: #6C1406;
-}
-
-
-
-/* --------- Video ---------- */
 
 .video-section {
-    max-width: 436px;
-    width: 50%;
+    max-width: calc(154vh - 160px); /* Subtract all other heights of elements in video section */
+    width: 100%;
     min-height: 491px;
-    padding: 30px;
-    margin-bottom: 0;
-    float: right;
+    padding: 70px 30px;
+    margin: 0 auto 0;
     position: relative;
     box-sizing: border-box;
     background: rgba(255, 255, 255, 0.15);
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(/images/main_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center 40%;
+    background-size: cover;
+    /*filter: blur(8px) brightness(2.7) contrast(0.3) saturate(5);*/
+    z-index: -1;
+    overflow: visible;
 }
 
 .youtube-player-container {
@@ -862,14 +913,46 @@ header.showsPageOverlap .just-the-tip {
     right: 0;
 }
 
+.iframe-slide .video-frame {
+    height: 120px;
+    width: 160px;
+}
+
+
+
 /* ------ Music player ------ */
 
+
 .music-player {
-    float: left;
+    width: auto;
+    max-width: 768px;
     height: 200px;
-    margin: 0px 0;
+    margin: 0px auto;
     padding: 30px;
     background: none;
+}
+
+.music-player .music-header, .music-player a {
+    color: #fff;
+}
+
+.music-background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(/images/shows_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center 40%;
+    background-size: cover;
+    /*filter: blur(8px) brightness(2.7) contrast(0.3) saturate(5);*/
+    z-index: -1;
+    overflow: visible;
+}
+
+.music-header {
+    text-align: center;
 }
 
 .bandcamp-player {
@@ -883,11 +966,6 @@ header.showsPageOverlap .just-the-tip {
 @media screen and (max-width: 915px) {
     #home-container {
         margin-top: 5px;
-    }
-
-    .content {
-        width: calc(50% - 60px);
-        height: 120px;
     }
 
     .about {
@@ -931,16 +1009,6 @@ header.showsPageOverlap .just-the-tip {
 
     .about-description {
         font-size: 14px;
-    }
-
-    .content, .video-section {
-        width: 100%;
-        height: auto;
-        max-width: none;
-        box-sizing: border-box;
-        float: none;
-        padding-left: 10%;
-        padding-right: 10%;
     }
 
     .youtube-player-container {
@@ -1000,7 +1068,7 @@ header.showsPageOverlap .just-the-tip {
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: url(/images/shows_bg.jpg); */
+    background-image: url(/images/shows_bg_old.jpg);
     background-repeat: no-repeat;
     background-position: center 40%;
     background-size: cover;
@@ -1289,6 +1357,30 @@ header.showsPageOverlap .just-the-tip {
 }
 
 
+/* ------------------------------- BIO ---------------------------- */
+
+#bio p {
+    margin: 1.5em 0;
+    line-height: 1.2;
+    text-shadow: 0.5px 0.5px 1px #fff;
+}
+
+.bio-background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(/images/shows_bg_light.jpg);
+    background-repeat: no-repeat;
+    background-position: center 40%;
+    background-size: cover;
+    /*filter: blur(8px) brightness(2.7) contrast(0.3) saturate(5);*/
+    z-index: -1;
+    overflow: visible;
+}
+
+
 /* ------------------------------- FOOTER ------------------------- */
 
 footer {
@@ -1309,9 +1401,68 @@ footer li:last-of-type {
 
 .contact-links {
     float: left;
+    width: 49%;
 }
 
 .contact a {
-    color: #cc4433;
+    /*color: #cc4433;*/
+    color: #ddb077;
 }
 
+
+.social-links {
+    float: right;
+    width: 50%;
+    text-align: right;
+}
+
+.social-item a {
+    display: block;
+}
+
+.social-item i {
+    font-size: 26px;
+    color: white;
+}
+.social-item i:hover {
+    font-size: 26px;
+    /*color: #cc4433;*/
+    color: #ddb077;
+    text-decoration: none;
+}
+
+
+/* ------------------------------- OVERLAYS ------------------------ */
+
+.next-page-container {
+    position: fixed;
+    height: 0;
+    bottom: 48px;
+    left: 0;
+    right: 0;
+}
+
+.next-page-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: auto;
+    width: 36px;
+    height: 36px;
+
+    background-color: rgba(255,255,255,0.5);
+    border: 1px solid #777;
+    border-radius: 50%;
+
+    transition: all 0.3s ease;
+}
+
+.next-page-button > i {
+    font-weight: 800;
+    color: #2E1E03;
+}
+
+.bioPageOverlap .next-page-button {
+    transform: rotate(180deg);
+}

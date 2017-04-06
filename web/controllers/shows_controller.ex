@@ -6,7 +6,4 @@ defmodule V2.ShowsController do
 		#Find out how to add the id jump to to the end of the url
 	end
 
-	def setScroll(conn, %{"target" => target}) do
-		render conn, "index.html", target: target
-	end
 end

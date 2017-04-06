@@ -9,5 +9,27 @@
                 </li>
             </ul>
         </div>
+        <ul class="social-links">
+            <li class="social-item">
+                <a href="https://www.facebook.com/aaronwaldmanmusic" target="_blank" title="Facebook">
+                    <i class="icon-facebook2"></i>
+                </a>
+            </li>
+            <li class="social-item">
+                <a href="https://aaronwaldman.bandcamp.com/releases" target="_blank" title="Bandcamp">
+                    <i class="icon-bandcamp"></i>
+                </a>
+            </li>
+            <li class="social-item">
+                <a href="https://www.instagram.com/aaron_waldman_music/" target="_blank" title="Instagram">
+                    <i class="icon-instagram"></i>
+                </a>
+            </li>
+            <li class="social-item">
+                <a href="https://www.youtube.com/channel/UCCr_YlzrQLM1rHEHy0ZltdA" target="_blank" title="YouTube">
+                    <i class="icon-youtube"></i>
+                </a>
+            </li>
+        </ul>
     </div>
 </footer>

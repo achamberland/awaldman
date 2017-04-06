@@ -21,13 +21,19 @@ import "phoenix_html"
 // import socket from "./socket"
 
 import Header from "web/static/js/layout/header";
+import Scroll from "web/static/js/layout/scroll";
 import Booking from "web/static/js/layout/booking";
-import Shows from "web/static/js/layout/shows";
+import VideosPage from "web/static/js/pages/videos";
+import MusicPage from "web/static/js/pages/music";
+import Shows from "web/static/js/pages/shows";
 
 export var App = {
 	modules: {
 		Booking: Booking,
 		Header: Header,
+		Scroll: Scroll,
+		VideosPage: VideosPage,
+		MusicPage: MusicPage,
 		Shows: Shows
 	},
 
@@ -37,8 +43,12 @@ export var App = {
 	        try {
 	            var context = this.modules[moduleKey];
 	            if (typeof context.loadDependencies === 'function') {
-	                var loader = context.loadDependencies();
-	                loader.then(context.init.bind(context));
+	                context.loadDependencies()
+		                .done(() => context.init())
+		                .fail(() => {
+		                	console.warn(`dependencies for module ${module} failed to load, continuing with init`);
+		                	context.init();
+	                	});
 	            }
 	            else if (context && typeof context.init === 'function') {
 	                context.init();

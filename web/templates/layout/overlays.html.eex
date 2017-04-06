@@ -1,0 +1,9 @@
+<div class="overlays-wrapper">
+
+	<div class="next-page-container">
+		<button id="next-page" class="next-page-button">
+			<i class="icon-chevron-thin-down"></i>
+		</button>
+	</div>
+
+</div>

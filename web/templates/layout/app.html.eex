@@ -24,7 +24,9 @@
         <%= render @view_module, @view_template, assigns %>
       </main>
 
-  <%= render V2.LayoutView, "footer.html", assigns %>
+    <%= render V2.LayoutView, "footer.html", assigns %>
+
+    <%= render V2.LayoutView, "overlays.html", assigns %>
 
     <%# JS Requrire scripts / Other Phoenix scripts %>
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>

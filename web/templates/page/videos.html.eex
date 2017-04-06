@@ -1,0 +1,16 @@
+<div id="videos" class="page video-page">
+    <div id="video-container" class="container">
+        <section class="video-section">
+            <div class="youtube-player-container responsive-container responsive-container-16x9">
+                <iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PL48VnMdyT9hM8_9z0eHf3WJmiZuA7-TxH" frameborder="0" allowfullscreen></iframe>
+            </div>
+            
+            <div class="youtube-links link-section">
+                <a href="https://www.youtube.com/channel/UCCr_YlzrQLM1rHEHy0ZltdA?sub_confirmation=1" target="_blank">
+                    Subscribe for new videos &gt;
+                </a>
+            </div>
+        </section>
+    </div>
+    <div class="video-background"></div>
+</div>

@@ -4,67 +4,15 @@ const Header = {
 
     element: null,
 
-    window: null,
-
-    height: null,
-
     mobileNavToggle: null,
 
     pageLinks: null,
 
-    activeState: "",
-
-    changeTriggers: [/* {klass: string, yThreshold: 0} */],
-
     init: function() {
-        this.window = $(window);
         this.element = $("#header");
         this.mobileNavToggle = $('#header-links-toggle');
-        this.pageLinks = this.element.find(".page-link");
-        this.height = this.element.outerHeight();
-
-        this.setTriggerPositions();
-
+        
         this.setMobileMenuEvents();
-
-        this.window.scroll(this.handleScroll.bind(this));
-        this.handleScroll();
-        this.element.removeClass('noBg');
-    },
-
-    setTriggerPositions: function() {
-        this.changeTriggers = [{
-            "klass": "homeContentOverlap",
-            "yThreshold": $("#home-container").offset().top,
-        }, {
-            "klass": "showsPageOverlap",
-            "yThreshold": $("#shows").offset().top - this.height
-        }];
-
-        this.changeTriggers.sort(function(a,b) {
-            return a.yThreshold > b.yThreshold
-        });
-    },
-
-    handleScroll: function() {
-        var bottomPos = this.window.scrollTop();
-        var active = null;
-
-        this.changeTriggers.forEach(function(trigger) {
-            if (bottomPos > trigger.yThreshold) {
-                active = trigger;
-            }
-        });
-
-        if (!active && this.active) {
-            this.element.removeClass(this.active.klass);
-            this.active = null;
-        }
-        else if (active != this.active) {
-            if (this.active) this.element.removeClass(this.active.klass);
-            this.active = active;
-            this.element.addClass(active.klass);
-        }
     },
 
     setMobileMenuEvents: function() {

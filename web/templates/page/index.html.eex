@@ -1,7 +1,19 @@
-<%= render @view_module, "home.html", assigns %>
+<%= render @view_module, "videos.html", assigns %>
+
+<div class="page-border">
+	
+</div>
+
+<%= render @view_module, "music.html", assigns %>
 
 <div class="page-border">
 	
 </div>
 
 <%= render @view_module, "shows.html", assigns %>
+
+<div class="page-border">
+	
+</div>
+
+<%= render @view_module, "bio.html", assigns %>

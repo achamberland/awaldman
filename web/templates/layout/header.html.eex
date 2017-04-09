@@ -7,20 +7,21 @@
             <i class="icon-menu"></i>
         </span>
         <nav class="header-links">
-            <a href="#videos" class="header-link shows-link page-link">
+            <a href="#videos" class="header-link video-link page-link">
                 <i class="icon-film"></i>Video
                 <div class="header-link-underline"></div>
             </a>
-            <a href="#music" class="header-link shows-link page-link">
+            <a href="#music" class="header-link music-link page-link">
                 <i class="icon-music"></i>Music
                 <div class="header-link-underline"></div>
             </a>
-            <a href="#shows" class="header-link">
+            <a href="#shows" class="header-link shows-link page-link">
                 <i class="icon-calendar"></i>Shows
                 <div class="header-link-underline"></div>
             </a>
-            <a href="#bio" class="header-link">
+            <a href="#bio" class="header-link bio-link page-link">
                 <i class="icon-book"></i>Bio
+                <div class="header-link-underline"></div>
             </a>
             <span id="booking-trigger" class="header-link clickable mobile-hide">
                 <i class="icon-phone"></i>Booking

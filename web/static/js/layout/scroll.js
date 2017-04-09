@@ -45,8 +45,8 @@ const Scroll = {
 
     setTriggerPositions: function() {
         this.changeTriggers = [{
-            "klass": "homeContentOverlap",
-            "yThreshold": $("#video-container").offset().top - this.headerOffset - 1,
+            "klass": "videoPageOverlap",
+            "yThreshold": -1,
         }, {
             "klass": "musicPageOverlap",
             "yThreshold": $("#music").offset().top - this.headerOffset
@@ -77,7 +77,7 @@ const Scroll = {
             this.body.removeClass(this.activePage.klass);
             this.activePage = null;
         }
-        else if (active != this.activePage) {
+        else if (active && active != this.activePage) {
             if (this.activePage) this.body.removeClass(this.activePage.klass);
             this.activePage = active;
             this.body.addClass(active.klass);

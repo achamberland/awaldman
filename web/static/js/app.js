@@ -44,7 +44,7 @@ export var App = {
 	            var context = this.modules[moduleKey];
 	            if (typeof context.loadDependencies === 'function') {
 	                context.loadDependencies()
-		                .done(() => context.init())
+		                .done((optParams) => context.init(optParams))
 		                .fail(() => {
 		                	console.warn(`dependencies for module ${module} failed to load, continuing with init`);
 		                	context.init();

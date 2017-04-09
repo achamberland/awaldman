@@ -1,50 +1,13 @@
 
-/* TODO: Find a more apple-ey color. Also match saturation between light and dark reds.
-
-/* PALLETE: 
-** Apple-red: #ac2413;
-** Apple-red (light):  #cc4433;
-** Grass: #295;
-** Black: #222;
-*/
-
-
-/*
-** PALLETTE 2: grass and dirt subdued
-forest: 053312;
-spring: 5CC207;
-bark: 403D1A;
-choc: 2E2105 ;
-ind red: 693411;
-*/
-
-/*
-** PALLETTE 4: grass and dirt DARRRKK
-grass: 055210;
-forest: 162102;
-dirt: 403A18;
-choc: 2E1E03 ; or darker 211502
-ind red: 69290E;
-*/
-
-
-/* PALLETTE 3: Wide variety with sky color
-sky:    #00D8FF;
-forest: #034218;
-spring: #91E300;
-brown:  #2E2502;
-clay: #7F3C00;
-
-
 /* ------------------------------- FONTS -------------------------------- */
 
 @font-face {
     font-family: 'walkway';
     src: url('/fonts/Walkway_Bold-webfont.eot');
     src: url('/fonts/Walkway_Bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/Walkway_Bold-webfont.woff') format('woff'),
-         url('/fonts/Walkway_Bold-webfont.ttf') format('truetype'),
-         url('/fonts/Walkway_Bold-webfont.svg#walkway') format('svg');
+        url('/fonts/Walkway_Bold-webfont.woff') format('woff'),
+        url('/fonts/Walkway_Bold-webfont.ttf') format('truetype'),
+        url('/fonts/Walkway_Bold-webfont.svg#walkway') format('svg');
     font-weight: 400;
     font-style: normal;
 }
@@ -52,9 +15,9 @@ clay: #7F3C00;
     font-family: 'walkway';
     src: url('/fonts/Walkway_UltraBold-webfont.eot');
     src: url('/fonts/Walkway_UltraBold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/Walkway_UltraBold-webfont.woff') format('woff'),
-         url('/fonts/Walkway_UltraBold-webfont.ttf') format('truetype'),
-         url('/fonts/Walkway_UltraBold-webfont.svg#walkway') format('svg');
+        url('/fonts/Walkway_UltraBold-webfont.woff') format('woff'),
+        url('/fonts/Walkway_UltraBold-webfont.ttf') format('truetype'),
+        url('/fonts/Walkway_UltraBold-webfont.svg#walkway') format('svg');
     font-weight: 500;
     font-style: normal;
 }
@@ -63,84 +26,84 @@ clay: #7F3C00;
 /* ----------------------------- FONT ICONS ------------------------------*/
 
 @font-face {
-  font-family: 'icomoon';
-  src:  url('/fonts/icomoon.eot?u03ykc');
-  src:  url('/fonts/icomoon.eot?u03ykc#iefix') format('embedded-opentype'),
-    url('/fonts/icomoon.ttf?u03ykc') format('truetype'),
-    url('/fonts/icomoon.woff?u03ykc') format('woff'),
-    url('/fonts/icomoon.svg?u03ykc#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'icomoon';
+    src: url('/fonts/icomoon.eot?u03ykc');
+    src: url('/fonts/icomoon.eot?u03ykc#iefix') format('embedded-opentype'),
+        url('/fonts/icomoon.ttf?u03ykc') format('truetype'),
+        url('/fonts/icomoon.woff?u03ykc') format('woff'),
+        url('/fonts/icomoon.svg?u03ykc#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 [class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
+/* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
 
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .icon-menu:before {
-  content: "\e909";
+    content: "\e909";
 }
 .icon-music:before {
-  content: "\e908";
+    content: "\e908";
 }
 .icon-envelope-o:before {
-  content: "\e907";
+    content: "\e907";
 }
 .icon-film:before {
-  content: "\e904";
+    content: "\e904";
 }
 .icon-chevron-down:before {
-  content: "\e905";
+    content: "\e905";
 }
 .icon-chevron-up:before {
-  content: "\e906";
+    content: "\e906";
 }
 .icon-chevron-thin-up:before {
-  content: "\e902";
+    content: "\e902";
 }
 .icon-chevron-thin-down:before {
-  content: "\e903";
+    content: "\e903";
 }
 .icon-bandcamp:before {
-  content: "\e900";
+    content: "\e900";
 }
 .icon-instagram:before {
-  content: "\e901";
+    content: "\e901";
 }
 .icon-paste:before {
-  content: "\e92d";
+    content: "\e92d";
 }
 .icon-phone:before {
-  content: "\e942";
+    content: "\e942";
 }
 .icon-calendar:before {
-  content: "\e953";
+    content: "\e953";
 }
 .icon-clipboard:before {
-  content: "\e9b8";
+    content: "\e9b8";
 }
 .icon-facebook2:before {
-  content: "\ea91";
+    content: "\ea91";
 }
 .icon-twitter:before {
-  content: "\ea96";
+    content: "\ea96";
 }
 .icon-youtube:before {
-  content: "\ea9d";
+    content: "\ea9d";
 }
 .icon-book:before {
-  content: "\e91f";
+    content: "\e91f";
 }
 
 
@@ -175,10 +138,9 @@ h1 {
     text-align: left;
     margin: 0;
     padding-bottom:2px;
-        width: 274px;
+    width: 274px;
     float: left;
 
-    border-bottom: 2px solid black;
     color: #333;
     font-size: 38px;
     line-height: 60px;
@@ -236,14 +198,6 @@ nav ul li a {
     text-decoration: underline;
 }
 
-section {
-    margin-bottom: 35px;
-}
-
-aside section {
-    padding: 0;
-}
-
 iframe {
     border: 0; 
 }
@@ -291,7 +245,6 @@ header {
 .container,
 .footer-container {
     margin: auto;
-    overflow: hidden;
 }
 
 .header-container,
@@ -304,9 +257,13 @@ header {
 /* ------------------------------- GENERAL CLASSES ------------------------- */
 
 .page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     width: 100%;
-    min-height: calc(100vh - 100px);
-    padding: 50px 0;
+    min-height: calc(100vh - 60px);
+    padding: 70px 0 50px;
     position: relative;
     overflow: hidden;
 }
@@ -325,7 +282,6 @@ header {
 
 .container {
     margin: auto;
-    overflow: hidden;
     position: relative;
 }
 
@@ -365,27 +321,27 @@ html body .hide {
 }
 
 .responsive-container {
-  position: relative;
-  height: 0;
-  overflow: hidden;
+    position: relative;
+    height: 0;
+    overflow: hidden;
 }
  
 /* 16x9 Aspect Ratio */
 .responsive-container-16x9 {
-  padding-bottom: 56.25%;
+    padding-bottom: 56.25%;
 }
  
 /* 4x3 Aspect Ratio */
 .responsive-container-4x3 {
-  padding-bottom: 75%;
+    padding-bottom: 75%;
 }
  
 .responsive-container iframe {
-  position: absolute;
-  top:0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 [class*="glassy-overlay"] {
@@ -416,9 +372,9 @@ header {
     z-index: 100;
 
     -webkit-transition: 0.5s ease background, 0.5s ease width, 0.5s ease border;
-       -moz-transition: 0.5s ease background, 0.5s ease width, 0.5s ease border;
-         -o-transition: 0.5s ease background, 0.5s ease width, 0.5s ease border;
-            transition: 0.5s ease background, 0.5s ease width, 0.5s ease border;
+    -moz-transition: 0.5s ease background, 0.5s ease width, 0.5s ease border;
+    -o-transition: 0.5s ease background, 0.5s ease width, 0.5s ease border;
+    transition: 0.5s ease background, 0.5s ease width, 0.5s ease border;
 }
 
 
@@ -459,9 +415,9 @@ header {
     text-align: center;
 
     -webkit-transition: 0.5s ease color;
-       -moz-transition: 0.5s ease color;
-         -o-transition: 0.5s ease color;
-            transition: 0.5s ease color;
+    -moz-transition: 0.5s ease color;
+    -o-transition: 0.5s ease color;
+    transition: 0.5s ease color;
 }
 
 .header-link:not(.mobile-only):last-of-type {
@@ -484,14 +440,13 @@ header {
 }
 
 .header-link-underline {
-    width: 100%;
-    margin-top: -3px;
-    border-bottom: 2px solid transparent;
+    margin: -3px -5px 0;
+    border-bottom: 3px solid transparent;
 
     -webkit-transition: 0.5s ease all;
-       -moz-transition: 0.5s ease all;
-         -o-transition: 0.5s ease all;
-            transition: 0.5s ease all;
+    -moz-transition: 0.5s ease all;
+    -o-transition: 0.5s ease all;
+    transition: 0.5s ease all;
 }
 
 #header-links-toggle {
@@ -625,6 +580,10 @@ header {
         font-size: 16px;
     }
 
+    .just-the-tip {
+        right: 22px;
+    }
+
     #booking-info section {
         padding: 0;
         font-size: 16px;
@@ -675,8 +634,12 @@ header {
         margin-right: 0;
     }
 
+    .header-link-underline {
+        width: 36px;
+    }
+
     .just-the-tip {
-        right: 4px;
+        right: -6px;
     }
 }
 
@@ -728,6 +691,7 @@ header {
     }
     .header-link-underline {
         width: 100%;
+        margin: 0;
     }
     .show-mobile-nav .header-link {
         display: inline-block;
@@ -746,6 +710,7 @@ header {
     .show-mobile-nav #header-links-toggle {
         display: inline-block;
         cursor: pointer;
+        border-bottom: none;
     }
 
     .show-mobile-nav .header-links,
@@ -773,11 +738,42 @@ header.noBg {
     background: transparent;
 }
 
+.videoPageOverlap header .video-link .header-link-underline {
+    margin-top: -4px;
+    border-color: #333;
+}
+.videoPageOverlap header .video-link:hover .header-link-underline {
+    border-color: #cc4433;
+}
+
+.musicPageOverlap header {
+    background: #112f35;
+}
+.musicPageOverlap h1 {
+    color: #eceFe2;
+}
+.musicPageOverlap header .music-link .header-link-underline {
+    background: #eceFe2;
+    border-color: #eceFe2;
+}
+.musicPageOverlap header .music-link:hover .header-link-underline {
+    border-color: #eceFe2;
+}
+.musicPageOverlap header,
+.musicPageOverlap header h1,
+.musicPageOverlap header .header-link {
+    color: #eceFe2;
+}
+
+.showsPageOverlap header .shows-link .header-link-underline {
+    border-color: #eceFe2;
+}
+.showsPageOverlap header .shows-link:hover .header-link-underline {
+    border-color: #fff;
+}
+
 .showsPageOverlap header {
     background: #2E1E03;
-}
-.showsPageOverlap header h1 {
-    border-bottom: 0;
 }
 
 .showsPageOverlapheader,
@@ -798,10 +794,10 @@ header.noBg {
     color: #fff;
 }
 
-.showsPageOverlap header .header-link-underline {
+.showsPageOverlap header .shows-link .header-link-underline {
     border-color: #eceFe2;
 }
-.showsPageOverlap header .header-link:hover .header-link-underline {
+.showsPageOverlap header .shows-link:hover .header-link-underline {
     border-color: #fff;
 }
 
@@ -816,7 +812,23 @@ header.noBg {
     color: #eceFe2;
 }
 
+.bioPageOverlap header .bio-link .header-link-underline {
+    margin-top: -4px;
+    border-color: #333;
+}
+.bioPageOverlap header .bio-link:hover .header-link-underline {
+    border-color: #cc4433;
+}
+
 @media screen and (max-width: 480px) {
+    .bioPageOverlap header .bio-link .header-link-underline,
+    .videoPageOverlap header .video-link .header-link-underline {
+        margin-top: 0;
+        margin-bottom: -2px;
+        padding-bottom: 2px;
+        border-color: #cc4433;
+    }
+
     .showsPageOverlap header.show-mobile-nav h1 {
         border-bottom: 2px solid #333;
     }
@@ -852,7 +864,7 @@ header.noBg {
 
 
 .link-section {
-    margin-top: 18px;
+    margin-top: 30px;
     text-align: center;
     font-family: walkway, helvetica, arial;
     font-weight: 500;
@@ -920,14 +932,22 @@ header.noBg {
 
 
 
-/* ------ Music player ------ */
+/* ------ Music Page ------ */
 
+.music-content {
+    margin-top: -50px;
+}
+
+.music-header {
+    margin-bottom: 20px;
+    font-size: 40px;
+}
 
 .music-player {
     width: auto;
     max-width: 768px;
     height: 200px;
-    margin: 0px auto;
+    margin: -30px auto 30px;
     padding: 30px;
     background: none;
 }
@@ -1026,7 +1046,7 @@ header.noBg {
 
 .shows {
     width: 70%;
-    margin: 40px auto 10px;
+    margin: -30px auto 30px;
     padding: 30px;
 }
 
@@ -1258,7 +1278,7 @@ header.noBg {
 }
 
 @media screen and (max-width: 480px) {
-    .shows-header {
+    .shows-header, .music-header {
         font-size: 28px;
     }
 
@@ -1359,6 +1379,10 @@ header.noBg {
 
 /* ------------------------------- BIO ---------------------------- */
 
+.bio-container {
+    margin: 0 30px;
+}
+
 #bio p {
     margin: 1.5em 0;
     line-height: 1.2;
@@ -1378,6 +1402,12 @@ header.noBg {
     /*filter: blur(8px) brightness(2.7) contrast(0.3) saturate(5);*/
     z-index: -1;
     overflow: visible;
+}
+
+@media screen and (max-width: 480px) {
+    #bio p {
+        font-size: 14px;
+    }
 }
 
 
@@ -1418,6 +1448,7 @@ footer li:last-of-type {
 
 .social-item a {
     display: block;
+    text-decoration: none;
 }
 
 .social-item i {
@@ -1429,6 +1460,28 @@ footer li:last-of-type {
     /*color: #cc4433;*/
     color: #ddb077;
     text-decoration: none;
+}
+
+@media screen and (max-width: 480px) {
+    .contact-links {
+        display: none;
+    }
+    .social-links {
+        float: none;
+        width: 100%;
+        display: -webkit-box; 
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: center;
+        justify-content: center;
+    }
+
+    footer .social-item {
+        -webkit-flex-grow: 1;
+        flex-grow: 1;
+        text-align: center;
+    }
 }
 
 

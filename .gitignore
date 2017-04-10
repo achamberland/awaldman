@@ -24,6 +24,8 @@ erl_crash.dump
 # secrets file as long as you replace its contents by environment
 # variables.
 
+# SHOWWWWWWSSSSSZS
+web/static/js/json/events.json
 
 /config/prod.secret.exs
 /_build

@@ -12,9 +12,8 @@ config :v2, V2.Endpoint,
   https: [port: 443,
           otp_app: :v2,
           keyfile: "/etc/letsencrypt/live/aaronwaldman.com/privkey.pem",
-          certfile: "/etc/letsencrypt/live/aaronwaldman.com/cert.pem" #,
-          # cacertfile: System.get_env("AARONWALDMAN_SSL_INTERMEDIATE_CERT") # OPTIONAL Key for intermediate certificates
-          ]
+          certfile: "/etc/letsencrypt/live/aaronwaldman.com/cert.pem"
+          ],
   debug_errors: true,
   code_reloader: true,
   check_origin: false,

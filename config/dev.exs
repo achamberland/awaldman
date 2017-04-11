@@ -8,7 +8,7 @@ use Mix.Config
 # with brunch.io to recompile .js and .css sources.
 config :v2, V2.Endpoint,
 #  http: [port: 4000],
-  http: [port: 4000],
+  http: [port: 80],
   https: [port: 4443,
           otp_app: :v2,
           keyfile: "/etc/letsencrypt/live/aaronwaldman.com/privkey.pem",

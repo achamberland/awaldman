@@ -2,7 +2,7 @@
     <div id="video-container" class="container">
         <section class="video-section">
             <div class="youtube-player-container responsive-container responsive-container-16x9">
-                <iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PL48VnMdyT9hM8_9z0eHf3WJmiZuA7-TxH" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PL48VnMdyT9hO8M0yao8BNKsUQEyCQAgYF" frameborder="0" allowfullscreen></iframe>
             </div>
             
             <div class="youtube-links link-section">

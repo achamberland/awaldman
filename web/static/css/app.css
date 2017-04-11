@@ -1434,6 +1434,10 @@ footer li:last-of-type {
     width: 49%;
 }
 
+.contact {
+    line-height: 26px;
+}
+
 .contact a {
     /*color: #cc4433;*/
     color: #ddb077;

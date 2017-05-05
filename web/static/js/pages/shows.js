@@ -102,6 +102,9 @@ const Shows = {
         var descriptionMaxHeight = Config.collapse_long_show_descriptions ? 36 : 9999;
         var limit = Math.min(shows.length, Config.max_shows_to_display);
 
+        if (shows) {
+            shows = shows.reverse();
+        }
         for (var i = 0; i < limit; i++) {
             // Check if show already happened
             var comparableTime = shows[i].end_time

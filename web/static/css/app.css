@@ -1101,7 +1101,8 @@ header.noBg {
 }
 
 .show-list {
-    max-height: 600px;
+    max-height: 65vh;
+
     overflow: auto;
     margin-top: 0;
 
@@ -1336,6 +1337,25 @@ header.noBg {
 
 }
 
+@media screen and (max-width: 380px) {
+    .day-container {
+        margin-top: 1px;
+    }
+    .day {
+        font-size: 21px;
+    }
+
+    .date {
+        padding-bottom: 24px;
+    }
+
+    .show-title,
+    .show-title a {
+        font-size: 18px;
+        line-height: 1.2;
+    }
+}
+
 
 /* -------- Shows - Dynamic Classes ---------*/
 
@@ -1488,6 +1508,10 @@ footer li:last-of-type {
         -webkit-flex-grow: 1;
         flex-grow: 1;
         text-align: center;
+    }
+
+    .social-item:last-of-type i {
+        margin-right: 0;
     }
 }
 

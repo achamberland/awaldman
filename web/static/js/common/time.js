@@ -6,7 +6,7 @@ export const Clock = {
         var rawHour = date.getHours();
         var isPm = rawHour > 11;
 
-        var hour = rawHour === 0 ? 12 : isPm && rawHour !== 12 ? rawHour - 11 : rawHour;
+        var hour = rawHour === 0 ? 12 : isPm && rawHour !== 12 ? rawHour - 12 : rawHour;
         var minutes = (date.getMinutes() + '0').slice(-2);
         var amPmString = isPm ? 'pm' : 'am';
 

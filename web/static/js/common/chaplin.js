@@ -8,7 +8,8 @@ const Chaplin = {
     replaceTemplateStrings: function(element, data) {
         var template = typeof element === 'string' ? element : $(element).html();
         if (data.description) {
-           data.description = this.addDescriptionTags(data.description); 
+           data.description = this.addDescriptionTags(data.description);
+           data.description = this.addLineBreaks(data.description);
         }
         var search = /\{\{.+?\}\}/g;
         return template.replace(search, function(str) {
@@ -22,6 +23,11 @@ const Chaplin = {
         var urlRegex = /(https?\:\/\/|www\.)[^\s()\[\]]+[^\s()\[\]\.\,\!\?]/g;
         var tagReplacement = '<a href="$&" target="_blank">$&</a>';
         return template.replace(urlRegex, tagReplacement);
+    },
+
+    // :(
+    addLineBreaks: function(template) {
+        return template.replace(/\n/g, "<br>");
     }
 }
 

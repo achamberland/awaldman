@@ -1,3 +1,5 @@
+import moment from "web/static/js/third_party/moment";
+
 export const Clock = {
 
     timezoneRegex: /-(GMT|)\d\d\d\d$/gi,
@@ -34,11 +36,6 @@ export const Calendar = {
     },
 
     getDateFromTimestamp: function(dateString) {
-        var timezoneRegex = /-(GMT|)\d\d\d\d$/gi;
-        var formattedDateString = dateString.replace(timezoneRegex, "");
-        var date = new Date(formattedDateString);
-
-        var adjustedHours = date.getHours() + (date.getTimezoneOffset() / 60)
-        return new Date(date.setHours(adjustedHours));
+        return moment(dateString).toDate()
     },
 };

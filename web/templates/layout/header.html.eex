@@ -30,11 +30,11 @@
                     <div class="just-the-tip"></div>
                     <section class="phone-section">
                         <i class="icon-phone"></i>
-                        <a href="tel:2074752993">
-                            <span class="telephone-text to-copy info-line"/>207.475.2993</span>
+                        <a href="tel:9175657610">
+                            <span class="telephone-text to-copy info-line"/>917.565.7610</span>
                         </a>
 
-                        <button id="phone-clipboard" class="clipboard" data-clipboard-text="12074752993">
+                        <button id="phone-clipboard" class="clipboard" data-clipboard-text="19175657610">
                             <i class="icon-paste"></i>
                         </button>
                     </section>
@@ -50,7 +50,7 @@
                     </section>
                 </div>
             </span>
-            <a href="tel:2074752993" class="header-link mobile-only">
+            <a href="tel:9175657610" class="header-link mobile-only">
                 <i class="icon-phone"></i>207.475.2993
             </a>
             <a href="mailto:waldmanaaron@gmail.com" class="header-link mobile-only">

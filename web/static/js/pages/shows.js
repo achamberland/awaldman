@@ -127,9 +127,7 @@ const Shows = {
 
             var totalHeight = this.getShowListHeight();
             var containerHeight = $('#shows-components').height();
-            if (totalHeight < containerHeight) {
-                $('#shows-components').addClass('no-scroll');
-            }
+            $('#shows-components').toggleClass('no-scroll', totalHeight < containerHeight);
 
             if (element.find('.eventDescription').innerHeight() > descriptionMaxHeight) {
                 element.addClass('collapsed-description');
@@ -155,6 +153,8 @@ const Shows = {
             else {
                 $(event.currentTarget).parent().removeClass('scrolledShows');
             }
+
+            $("#shows-components").toggleClass('no-scroll', $(event.currentTarget).scrollTop() > $(event.currentTarget).height());
         });
     },
 

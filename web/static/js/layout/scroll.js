@@ -34,6 +34,7 @@ const Scroll = {
     },
 
     scrollNext: function() {
+        debugger;
     	var activePageIndex = this.changeTriggers.indexOf(this.activePage);
     	var y = 0
     	if (activePageIndex > -1 && activePageIndex < (this.changeTriggers.length - 1)) {
@@ -44,6 +45,8 @@ const Scroll = {
     },
 
     setTriggerPositions: function() {
+        var resetActivePage = this.changeTriggers.length && this.activePage;
+        var activeIndex = this.changeTriggers.indexOf(this.activePage);
         this.changeTriggers = [{
             "klass": "videoPageOverlap",
             "yThreshold": -1,
@@ -61,6 +64,8 @@ const Scroll = {
         this.changeTriggers.sort(function(a,b) {
             return a.yThreshold > b.yThreshold
         });
+
+        this.activePage = this.changeTriggers[activeIndex]
     },
 
     handleScroll: function() {

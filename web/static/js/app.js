@@ -26,6 +26,7 @@ import Booking from "web/static/js/layout/booking";
 import VideosPage from "web/static/js/pages/videos";
 import MusicPage from "web/static/js/pages/music";
 import Shows from "web/static/js/pages/shows";
+import Bio from "web/static/js/pages/bio";
 
 export var App = {
 	modules: {
@@ -34,7 +35,8 @@ export var App = {
 		Scroll: Scroll,
 		VideosPage: VideosPage,
 		MusicPage: MusicPage,
-		Shows: Shows
+		Shows: Shows,
+		Bio: Bio
 	},
 
 	run: function() {
@@ -53,7 +55,7 @@ export var App = {
 	            else if (context && typeof context.init === 'function') {
 	                context.init();
 	            }
-	            else {
+	            else if (!context) {
 	                console.warn("Uhh what happened to " + moduleKey + "?");
 	            }
 	        }

@@ -8,7 +8,7 @@
         </span>
         <nav class="header-links">
             <a href="#videos" class="header-link video-link page-link">
-                <i class="icon-film"></i>Video
+                <i class="icon-film"></i>Videos
                 <div class="header-link-underline"></div>
             </a>
             <a href="#music" class="header-link music-link page-link">

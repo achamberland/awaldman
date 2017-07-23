@@ -355,7 +355,7 @@ html body .hide {
     background: rgba(255, 255, 255, 0.5);
 }
 .glassy-overlay-supe-heavs {
-    background: rgba(255, 255, 255, 0.75);
+    background: rgba(255, 255, 255, 0.85);
 }
 
 /* ------------------------------- HEADER ------------------------- */
@@ -843,7 +843,7 @@ header.noBg {
 }
 
 .home-background {
-    background-image: url(/images/main_bg.jpg);
+    background-image: url(/images/Sitting_on_couch.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -891,7 +891,11 @@ header.noBg {
     margin: 0 auto 0;
     position: relative;
     box-sizing: border-box;
-    background: rgba(255, 255, 255, 0.15);
+}
+
+.video-section .link-section a {
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
 }
 
 .video-background {
@@ -900,7 +904,7 @@ header.noBg {
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: url(/images/main_bg.jpg);
+    background-image: url(/images/sitting_on_rock_looking_out_Rough.jpg);
     background-repeat: no-repeat;
     background-position: center 40%;
     background-size: cover;
@@ -939,7 +943,9 @@ header.noBg {
 }
 
 .music-header {
-    margin-bottom: 20px;
+    color: #112f35;
+    margin-top: -20px;
+    margin-bottom: 25px;
     font-size: 40px;
 }
 
@@ -952,8 +958,12 @@ header.noBg {
     background: none;
 }
 
-.music-player .music-header, .music-player a {
+.music-player, .music-player a {
     color: #fff;
+}
+
+.music-player a {
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
 }
 
 .music-background {
@@ -962,7 +972,7 @@ header.noBg {
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: url(/images/shows_bg.jpg);
+    background-image: url(/images/singing_2nd_best.jpg);
     background-repeat: no-repeat;
     background-position: center 40%;
     background-size: cover;
@@ -1074,7 +1084,7 @@ header.noBg {
 .shows-header {
     padding: 0 20px 5px;
     margin: 0 -10px 0 -20px;
-    color: #eceFe2;
+    color: #2E1E03;
     font-size: 40px;
     font-weight: 700;
     letter-spacing: 2px;
@@ -1091,7 +1101,7 @@ header.noBg {
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: url(/images/shows_bg_old.jpg);
+    background-image: url(/images/Sitting_on_couch.jpg);
     background-repeat: no-repeat;
     background-position: center 40%;
     background-size: cover;
@@ -1106,8 +1116,9 @@ header.noBg {
     overflow: auto;
     margin-top: 0;
 
-    box-shadow: 0px -13px 20px -20px rgba(0,0,0,0.5) inset;
+    box-shadow: 0px -27px 20px -20px rgba(255,255,255,0.7) inset;
     border-radius: 2px;
+    transition: box-shadow 0.5s ease;
 }
 
 .show-list.no-scroll {
@@ -1129,7 +1140,7 @@ header.noBg {
     -ms-transition: 0.25s box-shadow ease;
     -moz-transition: 0.25s box-shadow ease;
     -webkit-transition: 0.25s box-shadow ease;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.65);
 }
 
 .showItem:hover {
@@ -1412,13 +1423,25 @@ header.noBg {
     text-shadow: 0.5px 0.5px 1px #fff;
 }
 
+#bio a {
+    text-decoration: underline;
+}
+
+.bio-intro {
+
+}
+
+.more-bio.collapsed {
+    display: none;
+}
+
 .bio-background {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: url(/images/shows_bg_light.jpg);
+    background-image: url(/images/Wall.jpg);
     background-repeat: no-repeat;
     background-position: center 40%;
     background-size: cover;

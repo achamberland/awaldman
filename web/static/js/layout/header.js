@@ -36,7 +36,9 @@ const Header = {
         this.element.addClass("show-mobile-nav");
 
         $('body').one("click", function(newEvent) {
-            self.handleActiveMenuClick(newEvent);
+            if ($(newEvent.currentTarget).closest(this.element)) {
+                self.handleActiveMenuClick(newEvent);
+            }
         });
     },
 

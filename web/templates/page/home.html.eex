@@ -10,7 +10,7 @@
             </p>
         </div>
         <section class="video-section">
-            <h2 class="video-header">Video</h2>
+            <h2 class="video-header">Videos</h2>
             <div class="youtube-player-container">
                 <iframe class="youtube-player" src="https://www.youtube-nocookie.com/embed/videoseries?list=PL48VnMdyT9hO8M0yao8BNKsUQEyCQAgYF" frameborder="0" allowfullscreen></iframe>
                 <iframe class="youtube-player" width="560" height="315" src="https://www.youtube.com/embed/3wj1o95Jh_s" frameborder="0" allowfullscreen></iframe>

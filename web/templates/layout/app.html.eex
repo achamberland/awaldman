@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="">
 
-    <meta property=”og:title” content=”Aaron Waldman”/>
+    <meta property=”og:title” content=”Frands”/>
     <meta property=”og:type” content="website"/>
     <meta property=”og:image” content=”image/fb_photo.jpg”/>
     <meta name=”twitter:image content=”image/fb_photo.jpg”>
     <meta property=”og:description content="All tunes have been recorded with minimalistic technological expenditure.">
     <meta name=”twitter:description content="All tunes have been recorded with minimalistic technological expenditure.">
  
-    <title>Aaron Waldman | Modern folk</title>
+    <title>Frands</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
   </head>
 

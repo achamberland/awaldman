@@ -1,7 +1,7 @@
 <header id="header" class="noBg">
     <div class="header-container">
         <a href="#home" class="page-link">
-            <h1>Aaron Waldman</h1>
+            <h1>Frands</h1>
         </a>
         <span id="header-links-toggle" class="header-link">
             <i class="icon-menu"></i>
@@ -41,10 +41,10 @@
 
                     <section class="email-section">
                         <i class="icon-envelope-o"></i>
-                        <a href="mailto:waldmanaaron@gmail.com">
-                            <span class="email-text to-copy info-line"/>waldmanaaron@gmail.com</span>
+                        <a href="mailto:frandstheband@gmail.com">
+                            <span class="email-text to-copy info-line"/>frandstheband@gmail.com</span>
                         </a>
-                        <button id="email-clipboard" class="clipboard" data-clipboard-text="waldmanaaron@gmail.com">
+                        <button id="email-clipboard" class="clipboard" data-clipboard-text="frandstheband@gmail.com">
                             <i class="icon-paste"></i>
                         </button>
                     </section>
@@ -53,8 +53,8 @@
             <a href="tel:9175657610" class="header-link mobile-only">
                 <i class="icon-phone"></i>207.475.2993
             </a>
-            <a href="mailto:waldmanaaron@gmail.com" class="header-link mobile-only">
-                <i class="icon-envelope-o"></i>waldmanaaron@gmail.com
+            <a href="mailto:frandstheband@gmail.com" class="header-link mobile-only">
+                <i class="icon-envelope-o"></i>frandstheband@gmail.com
             </a>
         </nav>
         <div class="clear"></div>

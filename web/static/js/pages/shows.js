@@ -116,6 +116,9 @@ const Shows = {
             shows[i].alreadyHappened = comparableTime < new Date(); 
 
             if (Config.show_upcoming_shows_only && shows[i].alreadyHappened) {
+                if (limit <= shows.length) {
+                    limit++;
+                }
                 continue;
             }
 

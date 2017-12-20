@@ -18,6 +18,6 @@ defmodule V2.Api.FacebookRequestController do
 	# Prob not secure
 	def write_shows(conn, response) do
 		File.write @json_write_path <> "events.json", response.body
-		send_resp(conn, 200, "Events list updated")
+		send_resp(conn, 200, "Events list updated" <> response.body)
 	end
 end

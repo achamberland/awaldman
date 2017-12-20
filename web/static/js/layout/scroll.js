@@ -34,7 +34,6 @@ const Scroll = {
     },
 
     scrollNext: function() {
-        debugger;
     	var activePageIndex = this.changeTriggers.indexOf(this.activePage);
     	var y = 0
     	if (activePageIndex > -1 && activePageIndex < (this.changeTriggers.length - 1)) {

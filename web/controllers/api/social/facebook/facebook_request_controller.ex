@@ -1,7 +1,7 @@
 defmodule V2.Api.FacebookRequestController do
 
 	@fb_access_token "728356867267766%7CuWPPYMGHZ1jaSCy91XhfiJtupoU" # Will use env variable
-	@events_url "https://graph.facebook.com/aaronwaldmanmusic/events" 
+	@events_url "https://graph.facebook.com/frandstheband/events" 
 
 	@json_write_path "web/static/js/json/"
 

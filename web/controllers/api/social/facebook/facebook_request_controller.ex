@@ -10,14 +10,19 @@ defmodule V2.Api.FacebookRequestController do
 	def update_shows(conn) do
 		response = HTTPotion.get!(@events_url, query: %{access_token: @fb_access_token})
 		case response.status_code do
-			200 -> write_shows(conn, response)
+			200 -> write_shows(response)
 			_ -> raise "Bad HTTP response from Facebook events request"
 		end
+		send_resp(conn, 200, "Events list updated" <> response.body)
+	end
+
+	def update_shows() do
+		response = HTTPotion.get!(@events_url, query: %{access_token: @fb_access_token})
+		write_shows(response)
 	end
 
 	# Prob not secure
-	def write_shows(conn, response) do
+	def write_shows(response) do
 		File.write @json_write_path <> "events.json", response.body
-		send_resp(conn, 200, "Events list updated" <> response.body)
 	end
 end

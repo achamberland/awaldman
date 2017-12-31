@@ -462,10 +462,10 @@ header {
 }
 
 #booking-info {
-    display: none;
+    display: inline-block;
     position: absolute;
-    top: 65px;
-    right: -2px;
+    top: -9999px;
+    right: -9999px;
     width: 360px;
     padding: 0 20px;
     text-align: left;
@@ -479,10 +479,16 @@ header {
     filter: drop-shadow(0px 0px 0px 1px rgba(0,0,0,0.5));
     -webkit-filter: drop-shadow(0px 0px 1px rgba(0,0,0,0.5));
     z-index: 102;
+
+    opacity: 0;
+    transition: 0.25s opacity ease;
+    -ms-transition: 0.25s opacity ease;
 }
 
 #booking-trigger.active #booking-info {
-    display: inline-block;
+    top: 65px;
+    right: -2px;
+    opacity: 1;
 }
 
 #booking-info i {
@@ -1199,7 +1205,8 @@ header.noBg {
     display: block;
 
     background: #cc4433;
-    border: 1px solid #ac2413;
+    border: 1px solid #fff;
+    border-bottom: 0;
     border-top-left-radius: 1px;
     border-top-right-radius: 1px;
     color: #eceFe2;
@@ -1233,6 +1240,7 @@ header.noBg {
 
     color: #eceFe2;
     font-size: 24px;
+    letter-spacing: 0.7px;
 }
 
 .eventDescription {
